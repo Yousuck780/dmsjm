@@ -498,14 +498,13 @@ UICorner_29.Parent = Comet
 -- [[ CODE ]]
 Players = game:GetService("Players")
 
-SupportedGame = false -- Check to see if comet supports the current game you're in
+SupportedGame = true -- Check to see if comet supports the current game you're in
 -- messy code
 function Destroy(part)
 	spawn(function()
 
 
 		if game:GetService("ReplicatedStorage"):FindFirstChild("DeleteCar") then
-		if game:GetService("ReplicatedStorage"):FindFirstChild("") then
 			SupportedGame = true
 			game:GetService("ReplicatedStorage").DeleteCar:FireServer(part)
 
